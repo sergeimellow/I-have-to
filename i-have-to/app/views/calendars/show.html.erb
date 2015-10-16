@@ -14,13 +14,13 @@
   <%= calendar @date do |date| %>
     <%= date.day %>
     <%= link_to 'new event', new_event_path %>
-    <%#if @articles_by_date[date] %>
-      <!-- <ul>
-        <%# @articles_by_date[date].each do |article| %>
-          <li><%#= link_to article.name, article %></li>
-        <%# end %>
-      </ul> -->
-    <%# end %>
+    <%if @events_by_date[date] %>
+      <ul>
+        <% @events_by_date[date].each do |event| %>
+          <li><%= link_to event.title, event %>aaaaaaaaaa</li>
+        <% end %>
+      </ul>
+    <% end %>
   <% end %>
 </div>
 

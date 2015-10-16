@@ -15,10 +15,16 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+    #have to rewrite for current user later
+    @calendars = Calendar.all
+    puts "~~~~~~~~~~~~~~~~~~~"
+    puts@calendars.inspect
+    puts "~~~~~~~~~~~~~~~~~~~"
   end
 
   # GET /events/1/edit
   def edit
+    @calendars = Calendar.all
   end
 
   # POST /events

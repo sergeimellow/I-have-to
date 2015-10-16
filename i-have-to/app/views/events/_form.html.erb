@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :time %><br>
-    <%= f.datetime_select :time %>
+    <%= f.label :event_date %><br>
+    <%= f.date_select :event_date %>
   </div>
   <div class="field">
     <%= f.label :title %><br>
@@ -25,7 +25,8 @@
   </div>
   <div class="field">
     <%= f.label :calendar_id %><br>
-    <%= f.text_field :calendar_id %>
+    <%#= f.text_field :calendar_id %>
+    <%= select_tag "Calendar", options_from_collection_for_select(@calendars, "id", "name") %>
   </div>
   <div class="actions">
     <%= f.submit %>

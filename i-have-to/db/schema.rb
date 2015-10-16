@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20151016035923) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "time"
+    t.date     "event_date"
     t.string   "title",       limit: 255
     t.text     "description", limit: 65535
     t.integer  "calendar_id", limit: 4

@@ -2,5 +2,5 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
-  $('#article_published_on').datepicker
+  $('#event_time').datepicker
     dateFormat: 'yy-mm-dd'
